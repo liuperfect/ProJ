@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>demo.html</title>
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<!--base定义 连接默认URL和默认路径  -->
+<base href="http://localhost:8080/MyNutZ/">
+<link>
+<style>
+header {
+	color: red
+}
+
+footer {
+	color: blue;
+}
+</style>
+</head>
+<header>这个是头部</header>
+<body>
+	<h1>H1这个是一个测试网页</h1>
+	<h2>H2这个是一个测试网页</h2>
+	<h3>H3这个是一个测试网页</h3>
+	<hr />
+	<a href="http://www.baidu.com" accesskey="l">超链接</a>
+	<img src="applogo.png" width="200px" height="200px" alt="图片" />
+	<p>P标签 第一个段落</p>
+	<abbr title="这个是缩写标签">缩写标签</abbr>是显示缩写的标签，鼠标移上去可以看到全写
+	<br /> 这个是一个百分比标签
+	<meter value="0.6" high="50" max="50"></meter>
+	<br /> 定义运行中 的任务进程
+	<progress value=" 0.3" max="5"></progress>
+	<pre>
+     pre 标签可定义预格式化的文本
+     
+     
+    可以保留空格和换行等
+    </pre>
+	<s>删除线文字</s>
+	<br />
+	<strong>加粗文本</strong>
+	<br /> 这个是一个
+	<sub>下标文本</sub>
+	<br /> 这个是一个
+	<sup>上标文本</sup>
+	<br /> 这个是一个
+	<u>下划线标签</u>
+	<br />
+	<hr />
+	表单
+	<form id="form1" action="#">
+		<fieldset name="属性">
+			<legend>设置标题</legend>
+			<label form="text">text 名称</label> 名称<input id="text" type="text"
+				placeholder="请输入名称" /><br />
+		</fieldset>
+		<textarea rows="5" cols="20" placeholder="required属性设置必填"
+			required="required"></textarea>
+		<br /> select required 属性设置必选 multiple设置可多选 <select>
+			<option>==请选择==</option>
+			<optgroup label="first label">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+			</optgroup>
+			<optgroup label="second label">
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			</optgroup>
+			<br />
+		</select> <input type="submit" value="提交" />
+	</form>
+
+	<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		0 <input type="range" id="a" value="50">100 +<input
+			type="number" id="b" value="50"> =
+		<output name="x" for="a b"></output>
+	</form>
+	<br /> 下面是一个frame标签
+	<br />
+	<iframe src="http://www.baidu.com" height="100px" width="900px"></iframe>
+	<br /> 下面是一格图片
+	<img src="123.jpg" width="600px" height="400px" usemap="imgmap" />
+	<br />
+	<map name="imgmap">
+		<area alt="one" coords="550,550,550" shape="circle"
+			href="http://www.baidu.com">
+	</map>
+	<br /> 音频文件 ：autoplay属性决定加载后自动播放
+	<audio controls="controls">
+		<source src="123.mp3">
+	</audio>
+	视频或者音频文件
+	<video controls="controls">
+		<source src="123.mp4">
+	</video>
+	a标签演示 下载 href为下载的文件，download为下载后的名字
+	<a href="123.mp3" download="888">123，mp3</a>
+	<br /> nav标签，定义导航
+	<nav>
+		<a href="http://www.baidu.com"> BaiDu</a> <a href="http://www.163.com">
+			163 </a>
+	</nav>
+	ul标签
+	<ul>
+		<li>闻喜</li>
+		<li>运城</li>
+		<li>山西</li>
+	</ul>
+	ol标签 reversed属性设置倒序
+	<ol reversed>
+		<li>闻喜</li>
+		<li>运城</li>
+		<li>山西</li>
+	</ol>
+	dl标签
+	<dl>
+		<dt>Coffee</dt>
+		<dd>Black hot drink</dd>
+		<dt>Milk</dt>
+		<dd>White cold drink</dd>
+	</dl>
+	menu标签
+	<menu label="first menu">
+		<button type="button" onclick="testbutton()">Cut</button>
+		<button type="button" onclick="testbutton()">Copy</button>
+		<button type="button" onclick="testbutton()">Paste</button>
+	</menu>
+
+	table表格
+	<style type="text/css">
+thead {
+	color: red;
+}
+
+tbody {
+	color: green;
+}
+
+tfoot {
+	color: blue
+}
+</style>
+	<table border="1">
+		<caption>表格标题</caption>
+		<col>
+		<thead>
+			<tr>
+				<th>月份</th>
+				<th>数据</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>一月</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>二月</td>
+				<td>444</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>合计</td>
+				<td>544</td>
+			</tr>
+		</tfoot>
+	</table>
+	<p>
+		<b>提示:</b> thead, tbody, 和 tfoot 元素默认不会影响表格的布局。不过，您可以使用 CSS
+		来为这些元素定义样式，从而改变表格的外观。
+	</p>
+	<details>
+		<summary>details标签说明</summary>
+		<pre>
+		details 标签规定了用户可见的或者隐藏的需求的补充细节。
+		details 标签用来供用户开启关闭的交互式控件。任何形式的内容都能被放在 details 标签里边。
+		details 元素的内容对用户是不可见的，除非设置了 open 属性。
+		</pre>
+	</details>
+	<ul>
+		<li date-animal-type="bird" date-color="red" onclick="showdate(this)">鹦鹉</li>
+		<li date-animal-type="bird" date-color="gray">麻雀</li>
+	</ul>
+	<button autofocus="autofocus" onclick="testbutton()">提交按钮</button>
+	<script type="text/javascript">
+		function testbutton() {
+			alert("text");
+		}
+		function showdate(animal){
+			var animaltype=animal.getAttribute("date-animal-type");
+			var color=animal.getAttribute("date-color");
+			alert("这个是一个"+animaltype);
+			alert("他的颜色是"+color);
+		}
+		
+	</script>
+	<footer>
+		<p> 这个是底部标签</p>
+	</footer>
+</body>
+</html>
